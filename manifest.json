@@ -1,0 +1,29 @@
+{
+  "id": "compact",
+  "name": "智能压缩上下文",
+  "name_en": "Smart compaction",
+  "version": "0.1.0",
+  "description": "把较早的对话压成一条摘要，腾出上下文空间；摘要由模型自己写，插件负责安全地改历史。",
+  "description_en": "Replace early history with one summary to free context; the model writes the summary, the plugin rewrites history safely.",
+  "author": "yushuchun177",
+  "homepage": "https://github.com/yushuchun177/localharness-plugin-compact",
+  "min_app": "0.1.0",
+  "tools": [
+    {
+      "name": "compact_read",
+      "description": "取出「最近 N 轮之前」的对话原文，供你写摘要用。N 默认 4。",
+      "params": {
+        "keep": "int，可选，保留最近几轮，默认 4"
+      }
+    },
+    {
+      "name": "compact_apply",
+      "description": "把摘要写进历史：用一条摘要替换掉较早的消息，只保留最近 N 轮原话。",
+      "params": {
+        "summary": "string，你写的摘要",
+        "keep": "int，可选，默认 4"
+      },
+      "dangerous": true
+    }
+  ]
+}
