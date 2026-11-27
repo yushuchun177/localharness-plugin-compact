@@ -41,5 +41,30 @@
         "改写会话历史"
       ]
     }
+  ],
+  "settings": [
+    {
+      "key": "trigger",
+      "label": "自动压缩阈值",
+      "type": "string",
+      "default": "85",
+      "help": "上下文用到多少时自动压缩，off = 只手动"
+    },
+    {
+      "key": "keep",
+      "label": "保留最近轮数",
+      "type": "int",
+      "default": 4,
+      "min": 1,
+      "max": 12,
+      "unit": "轮"
+    },
+    {
+      "key": "style",
+      "label": "摘要详细程度",
+      "type": "string",
+      "default": "mid",
+      "help": "short / mid / long"
+    }
   ]
 }
