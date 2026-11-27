@@ -8,13 +8,24 @@
   "author": "yushuchun177",
   "homepage": "https://github.com/yushuchun177/localharness-plugin-compact",
   "min_app": "0.1.0",
+  "requires": {
+    "os": "全平台",
+    "deps": [],
+    "disk": "0",
+    "memory": "约 2 MB",
+    "network": false
+  },
   "tools": [
     {
       "name": "compact_read",
       "description": "取出「最近 N 轮之前」的对话原文，供你写摘要用。N 默认 4。",
       "params": {
         "keep": "int，可选，保留最近几轮，默认 4"
-      }
+      },
+      "level": "read",
+      "needs": [
+        "当前会话"
+      ]
     },
     {
       "name": "compact_apply",
@@ -23,7 +34,11 @@
         "summary": "string，你写的摘要",
         "keep": "int，可选，默认 4"
       },
-      "dangerous": true
+      "dangerous": true,
+      "level": "danger",
+      "needs": [
+        "改写会话历史"
+      ]
     }
   ]
 }
