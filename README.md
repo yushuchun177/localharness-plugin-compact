@@ -29,7 +29,9 @@ Replace early history with one summary to free context; the model writes the sum
 
 ## 设置项
 
-（没有可调参数）
+- **自动压缩阈值**（`trigger`，默认 `85`）上下文用到多少时自动压缩，off = 只手动
+- **保留最近轮数**（`keep`，默认 `4`）
+- **摘要详细程度**（`style`，默认 `mid`）short / mid / long
 
 ## 权限
 
@@ -82,7 +84,9 @@ Manual: unzip this repo into `%LOCALAPPDATA%\Godot\app_userdata\Local-Harness\pl
 
 ## Settings
 
-(nothing to configure)
+- **自动压缩阈值** (`trigger`, default `85`) 上下文用到多少时自动压缩，off = 只手动
+- **保留最近轮数** (`keep`, default `4`) 
+- **摘要详细程度** (`style`, default `mid`) short / mid / long
 
 ## Permissions
 
