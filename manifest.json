@@ -3,6 +3,7 @@
   "name": "智能压缩上下文",
   "name_en": "Smart compaction",
   "version": "0.1.0",
+  "license": "GPL-3.0",
   "description": "把较早的对话压成一条摘要，腾出上下文空间；摘要由模型自己写，插件负责安全地改历史。",
   "description_en": "Replace early history with one summary to free context; the model writes the summary, the plugin rewrites history safely.",
   "author": "yushuchun177",
